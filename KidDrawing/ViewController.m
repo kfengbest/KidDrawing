@@ -60,7 +60,7 @@
                              forIndexPath:indexPath];
     
     NSString* path = fileThumbnails[indexPath.row];
-    NSString* name = [NSString stringWithFormat:@"%@4s.png", path];
+    NSString* name = [NSString stringWithFormat:@"%@0.png", path];
     
     UIImage *img = [UIImage imageNamed:name];
     

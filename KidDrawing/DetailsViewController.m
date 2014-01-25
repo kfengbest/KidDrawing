@@ -30,11 +30,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-//    NSString *pathbg = [[NSBundle mainBundle] pathForResource:@"wallpaper_darkgrey2" ofType:@"jpg" inDirectory:@"JPG"];
-//    self.view.layer.contents = (id)[UIImage imageWithContentsOfFile:pathbg].CGImage;
 
     int num = 4;
+    int imageW = 300;
+    int imageH = 300;
     
     // SrollView
     UIScrollView* sv = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -48,13 +47,18 @@
     [sv setDelegate:self];
     
     for (int i = 0; i < num; i++) {
-        UIView* view = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width * i, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        UIView* subView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width * i, 0, self.view.frame.size.width, self.view.frame.size.height)];
         
         NSString* name = [NSString stringWithFormat:@"%@%d.png", self.name,i+1];
         UIImage *img = [UIImage imageNamed:name];
   
-        view.layer.contents = (id)img.CGImage;
-        [sv addSubview:view];
+        int dx = (subView.frame.size.width - imageW) / 2;
+        int dy = (subView.frame.size.height - imageH) / 2;
+        UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(dx, dy, imageW, imageH)];
+        [imgView setImage:img];
+        
+        [subView addSubview:imgView];
+        [sv addSubview:subView];
         
     }
     
