@@ -4,16 +4,57 @@
 <dict>
 	<key>Thumbnails</key>
 	<array>
-		<string>apple</string>
-		<string>balloon</string>
 		<string>bambooshoot</string>
+		<string>ballon</string>
 		<string>basketball</string>
+		<string>banana</string>
 		<string>basket</string>
 		<string>bear</string>
-		<string>bird</string>
-		<string>bowl</string>
-		<string>butterfly</string>
-		<string>cabbage</string>
+		<string>cup</string>
+		<string>car1</string>
+		<string>carbbage</string>
+		<string>carrot</string>
+		<string>clock</string>
+		<string>cherry</string>
+		<string>cup</string>
+		<string>drum</string>
+		<string>elephant</string>
+		<string>eggplant</string>
+		<string>fan</string>
+		<string>garlic</string>
+		<string>grape</string>
+		<string>hedgehog</string>
+		<string>icecream</string>
+		<string>lamp</string>
+		<string>lion</string>
+		<string>lotusroot</string>
+		<string>mashroom</string>
+		<string>monkey</string>
+		<string>pineapple</string>
+		<string>pomegranate</string>
+		<string>pumpkin</string>
+		<string>rabbit</string>
+		<string>snake</string>
+		<string>sunflower</string>
+		<string>turtle</string>
+		<string>whale</string>
+		<string>bambooshoot</string>
+		<string>ballon</string>
+		<string>basketball</string>
+		<string>banana</string>
+		<string>bear</string>
+		<string>cup</string>
+		<string>carrot</string>
+		<string>cherry</string>
+		<string>drum</string>
+		<string>elephant</string>
+		<string>fan</string>
+		<string>garlic</string>
+		<string>grape</string>
+		<string>hedgehog</string>
+		<string>icecream</string>
+		<string>lamp</string>
+		<string>lion</string>
 	</array>
 </dict>
 </plist>
