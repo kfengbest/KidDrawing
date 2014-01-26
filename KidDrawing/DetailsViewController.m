@@ -13,6 +13,10 @@
 {
     UIPageControl* pageControl;
     UIScrollView* sv;
+    int imageW;
+    int imageH;
+    int originalViewW;
+    int originalViewH;
 }
 @end
 
@@ -34,13 +38,22 @@
 
     
     int num = 4;
-    int imageW = 300;
-    int imageH = 300;
+    imageW = 300;
+    imageH = 300;
+    originalViewW = self.view.frame.size.width;
+    originalViewH = self.view.frame.size.height;
     
     self.navigationItem.title = self.name;
     // SrollView
-    sv = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
+    int scrollviewOffset = 0;
+    if (self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+        self.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        self.view.frame = CGRectMake(0, 0, originalViewH, originalViewW);
+        scrollviewOffset = 20;
+    }
+    
+    sv = [[UIScrollView alloc] initWithFrame:CGRectMake(0, scrollviewOffset, self.view.frame.size.width, self.view.frame.size.height)];
     sv.contentSize = CGSizeMake(self.view.frame.size.width * num,self.view.frame.size.height);
     [self.view addSubview:sv];
     
@@ -94,25 +107,72 @@
     [super willRotateToInterfaceOrientation:toInterfaceOrientation
                                    duration:duration];
 
-//    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
-//        int w = self.view.bounds.size.width;
-//        int h = self.view.bounds.size.height;
-//        self.view.frame = CGRectMake(0, 0, 568, 300);
-//        
-//        sv.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-//        sv.contentSize = CGSizeMake(self.view.frame.size.width * 4,self.view.frame.size.height);
-//        
-//    }else if(toInterfaceOrientation == UIInterfaceOrientationLandscapeRight){
-//        int w = self.view.bounds.size.width;
-//        int h = self.view.bounds.size.height;
-//        self.view.frame = CGRectMake(0, 0, 568, 300);
-//        sv.contentSize = CGSizeMake(self.view.frame.size.width * 4,self.view.frame.size.height);
-//
-//        
-//    }else if (toInterfaceOrientation == UIInterfaceOrientationPortrait){
-//        self.view.frame = CGRectMake(0, 0, 300, 568);
-//        sv.contentSize = CGSizeMake(self.view.frame.size.width * 4,self.view.frame.size.height);
-//    }
+    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+
+        self.view.frame = CGRectMake(0, 0, originalViewH, originalViewW);
+        sv.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height);
+        sv.contentSize = CGSizeMake(self.view.frame.size.width * 4,self.view.frame.size.height);
+
+        NSArray* subViews = sv.subviews;
+        for (int i = 0; i < subViews.count; i++) {
+            UIView* subView = (UIView*)subViews[i];
+            subView.frame = CGRectMake(self.view.frame.size.width * i, 0, self.view.frame.size.width, self.view.frame.size.height);
+            
+            NSArray* subImages = subView.subviews;
+            UIView* imageView = (UIView*)subImages[0];
+            
+            int dx = (subView.frame.size.width - imageW) / 2;
+            int dy = (subView.frame.size.height - imageH) / 2;
+            imageView.frame = CGRectMake(dx, dy, imageW, imageH);
+        }
+        
+        pageControl.frame = CGRectMake(0, self.view.frame.size.height - 20, self.view.frame.size.width, 20);
+
+        
+    }else if(toInterfaceOrientation == UIInterfaceOrientationLandscapeRight){
+
+        
+        self.view.frame = CGRectMake(0, 0, originalViewH, originalViewW);
+        sv.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height);
+        sv.contentSize = CGSizeMake(self.view.frame.size.width * 4,self.view.frame.size.height);
+
+        NSArray* subViews = sv.subviews;
+        for (int i = 0; i < subViews.count; i++) {
+            UIView* subView = (UIView*)subViews[i];
+            subView.frame = CGRectMake(self.view.frame.size.width * i, 0, self.view.frame.size.width, self.view.frame.size.height);
+            
+            NSArray* subImages = subView.subviews;
+            UIView* imageView = (UIView*)subImages[0];
+            int dx = (subView.frame.size.width - imageW) / 2;
+            int dy = (subView.frame.size.height - imageH) / 2;
+            imageView.frame = CGRectMake(dx, dy, imageW, imageH);
+            
+        }
+        
+        pageControl.frame = CGRectMake(0, self.view.frame.size.height - 20, self.view.frame.size.width, 20);
+
+        
+    }else if (toInterfaceOrientation == UIInterfaceOrientationPortrait){
+        self.view.frame = CGRectMake(0, 0, originalViewW, originalViewH);
+        sv.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        sv.contentSize = CGSizeMake(self.view.frame.size.width * 4,self.view.frame.size.height);
+        
+        NSArray* subViews = sv.subviews;
+        for (int i = 0; i < subViews.count; i++) {
+            UIView* subView = (UIView*)subViews[i];
+            subView.frame = CGRectMake(self.view.frame.size.width * i, 0, self.view.frame.size.width, self.view.frame.size.height);
+            
+            NSArray* subImages = subView.subviews;
+            UIView* imageView = (UIView*)subImages[0];
+            
+            int dx = (subView.frame.size.width - imageW) / 2;
+            int dy = (subView.frame.size.height - imageH) / 2;
+            imageView.frame = CGRectMake(dx, dy, imageW, imageH);
+        }
+        
+        pageControl.frame = CGRectMake(0, self.view.frame.size.height - 20, self.view.frame.size.width, 20);
+
+    }
     
 }
 
