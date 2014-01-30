@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-1258" y="50"/>
         </scene>
-        <!--View Controller - Kids Drawing-->
+        <!--View Controller - Drawing Gallery-->
         <scene sceneID="kKi-Ou-ZQ2">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="uzG-uL-Wiw" customClass="ViewController" sceneMemberID="viewController">
@@ -67,7 +67,7 @@
                             <outlet property="delegate" destination="uzG-uL-Wiw" id="iQj-Fd-PDD"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Kids Drawing" id="chc-MF-Hid"/>
+                    <navigationItem key="navigationItem" title="Drawing Gallery" id="chc-MF-Hid"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhA-Sm-lb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

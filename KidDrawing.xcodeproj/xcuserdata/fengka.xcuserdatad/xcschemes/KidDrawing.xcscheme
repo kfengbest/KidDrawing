@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "123E396C188E9882008B7257"
-               BuildableName = "KidDrawing.app"
+               BuildableName = "Drawing4Kids.app"
                BlueprintName = "KidDrawing"
                ReferencedContainer = "container:KidDrawing.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "123E396C188E9882008B7257"
-            BuildableName = "KidDrawing.app"
+            BuildableName = "Drawing4Kids.app"
             BlueprintName = "KidDrawing"
             ReferencedContainer = "container:KidDrawing.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "123E396C188E9882008B7257"
-            BuildableName = "KidDrawing.app"
+            BuildableName = "Drawing4Kids.app"
             BlueprintName = "KidDrawing"
             ReferencedContainer = "container:KidDrawing.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "123E396C188E9882008B7257"
-            BuildableName = "KidDrawing.app"
+            BuildableName = "Drawing4Kids.app"
             BlueprintName = "KidDrawing"
             ReferencedContainer = "container:KidDrawing.xcodeproj">
          </BuildableReference>
