@@ -29,9 +29,8 @@
     NSDictionary* dic = [[NSDictionary alloc] initWithContentsOfFile:path];
     fileThumbnails = [dic objectForKey:@"Thumbnails"];
     
-    UICollectionViewFlowLayout *flow = (UICollectionViewFlowLayout*)self.collectionViewLayout;
-  //  flow.minimumInteritemSpacing = 5;
-    flow.sectionInset = UIEdgeInsetsMake(5, 5, 0, 5);
+//    UICollectionViewFlowLayout *flow = (UICollectionViewFlowLayout*)self.collectionViewLayout;
+//    flow.sectionInset = UIEdgeInsetsMake(5, 5, 0, 5);
     
 }
 
