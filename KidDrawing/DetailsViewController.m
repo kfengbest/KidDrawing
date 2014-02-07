@@ -38,8 +38,16 @@
 
     
     int num = 4;
-    imageW = 300;
-    imageH = 300;
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        imageW = 600;
+        imageH = 600;
+    }
+    else{
+        imageW = 300;
+        imageH = 300;
+    }
+
     originalViewW = self.view.frame.size.width;
     originalViewH = self.view.frame.size.height;
     
@@ -152,7 +160,8 @@
         pageControl.frame = CGRectMake(0, self.view.frame.size.height - 20, self.view.frame.size.width, 20);
 
         
-    }else if (toInterfaceOrientation == UIInterfaceOrientationPortrait){
+    }else if (toInterfaceOrientation == UIInterfaceOrientationPortrait ||
+              toInterfaceOrientation == UIDeviceOrientationPortraitUpsideDown){
         self.view.frame = CGRectMake(0, 0, originalViewW, originalViewH);
         sv.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
         sv.contentSize = CGSizeMake(self.view.frame.size.width * 4,self.view.frame.size.height);
