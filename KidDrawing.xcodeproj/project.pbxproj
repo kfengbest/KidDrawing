@@ -198,6 +198,7 @@
 		123E39CD188E9AB6008B7257 /* FileLists.plist in Resources */ = {isa = PBXBuildFile; fileRef = 123E39CC188E9AB6008B7257 /* FileLists.plist */; };
 		123E39D0188E9B44008B7257 /* ImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 123E39CF188E9B44008B7257 /* ImageViewCell.m */; };
 		123E39D3188EAD91008B7257 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123E39D2188EAD91008B7257 /* DetailsViewController.m */; };
+		125D1B8318AA4F5C00487A76 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125D1B8218AA4F5C00487A76 /* iAd.framework */; };
 		12DD335F18A53E6300EF4E8A /* Icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DD335818A53E6300EF4E8A /* Icon29.png */; };
 		12DD336118A53E6300EF4E8A /* Icon40.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DD335A18A53E6300EF4E8A /* Icon40.png */; };
 		12DD336418A53E6300EF4E8A /* Icon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DD335D18A53E6300EF4E8A /* Icon76.png */; };
@@ -421,6 +422,7 @@
 		123E39CF188E9B44008B7257 /* ImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewCell.m; sourceTree = "<group>"; };
 		123E39D1188EAD91008B7257 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		123E39D2188EAD91008B7257 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		125D1B8218AA4F5C00487A76 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		12DD335818A53E6300EF4E8A /* Icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon29.png; sourceTree = "<group>"; };
 		12DD335A18A53E6300EF4E8A /* Icon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon40.png; sourceTree = "<group>"; };
 		12DD335D18A53E6300EF4E8A /* Icon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon76.png; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				125D1B8318AA4F5C00487A76 /* iAd.framework in Frameworks */,
 				123E3973188E9882008B7257 /* CoreGraphics.framework in Frameworks */,
 				123E3975188E9882008B7257 /* UIKit.framework in Frameworks */,
 				123E3971188E9882008B7257 /* Foundation.framework in Frameworks */,
@@ -481,6 +484,7 @@
 		123E396F188E9882008B7257 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				125D1B8218AA4F5C00487A76 /* iAd.framework */,
 				123E3970188E9882008B7257 /* Foundation.framework */,
 				123E3972188E9882008B7257 /* CoreGraphics.framework */,
 				123E3974188E9882008B7257 /* UIKit.framework */,
@@ -1108,6 +1112,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "C4DBB148-02DC-4765-B14A-E883387FD35A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1142,6 +1147,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "C4DBB148-02DC-4765-B14A-E883387FD35A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
