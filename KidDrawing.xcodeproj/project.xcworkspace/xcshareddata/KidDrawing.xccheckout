@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6931EC76-8EDD-4E38-8B3F-EE7A6B3B4B23</string>
+	<string>66AFEDF3-7C90-45B6-8322-792AA7154E25</string>
 	<key>IDESourceControlProjectName</key>
 	<string>KidDrawing</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>85A9580C-7FE7-4612-9FDD-3E219D295042</key>
-		<string>git2ATec2:KidDrawing.git</string>
+		<key>E19DD681-A79A-4BFC-BC32-8ABE95BF1345</key>
+		<string>git2ATec2:KidDrawing</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>KidDrawing.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>85A9580C-7FE7-4612-9FDD-3E219D295042</key>
+		<key>E19DD681-A79A-4BFC-BC32-8ABE95BF1345</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>git2ATec2:KidDrawing.git</string>
+	<string>git2ATec2:KidDrawing</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>85A9580C-7FE7-4612-9FDD-3E219D295042</string>
+	<string>E19DD681-A79A-4BFC-BC32-8ABE95BF1345</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>85A9580C-7FE7-4612-9FDD-3E219D295042</string>
+			<string>E19DD681-A79A-4BFC-BC32-8ABE95BF1345</string>
 			<key>IDESourceControlWCCName</key>
 			<string>KidDrawing</string>
 		</dict>

@@ -211,6 +211,7 @@
 		12DD337218A5C7B100EF4E8A /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DD336E18A5C7B100EF4E8A /* Default-Portrait@2x~ipad.png */; };
 		12DD337318A5C7B100EF4E8A /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DD336F18A5C7B100EF4E8A /* Default-Portrait~ipad.png */; };
 		12FC56B31895240100ADD6EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12FC56B11895240100ADD6EF /* Default-568h@2x.png */; };
+		605BF5DA18ABBE3400A9CF78 /* SketchPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BF5D918ABBE3400A9CF78 /* SketchPadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -435,6 +436,8 @@
 		12DD336E18A5C7B100EF4E8A /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		12DD336F18A5C7B100EF4E8A /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		12FC56B11895240100ADD6EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		605BF5D818ABBE3400A9CF78 /* SketchPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchPadView.h; sourceTree = "<group>"; };
+		605BF5D918ABBE3400A9CF78 /* SketchPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchPadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,11 +499,13 @@
 		123E3976188E9882008B7257 /* KidDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				605BF5D818ABBE3400A9CF78 /* SketchPadView.h */,
+				605BF5D918ABBE3400A9CF78 /* SketchPadView.m */,
 				123E39CE188E9B44008B7257 /* ImageViewCell.h */,
 				123E39CF188E9B44008B7257 /* ImageViewCell.m */,
+				123E3982188E9882008B7257 /* Main_iPhone.storyboard */,
 				123E397F188E9882008B7257 /* AppDelegate.h */,
 				123E3980188E9882008B7257 /* AppDelegate.m */,
-				123E3982188E9882008B7257 /* Main_iPhone.storyboard */,
 				123E3985188E9882008B7257 /* Main_iPad.storyboard */,
 				123E39D1188EAD91008B7257 /* DetailsViewController.h */,
 				123E39D2188EAD91008B7257 /* DetailsViewController.m */,
@@ -1014,6 +1019,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				605BF5DA18ABBE3400A9CF78 /* SketchPadView.m in Sources */,
 				123E39D0188E9B44008B7257 /* ImageViewCell.m in Sources */,
 				123E39D3188EAD91008B7257 /* DetailsViewController.m in Sources */,
 				123E398A188E9882008B7257 /* ViewController.m in Sources */,
@@ -1159,14 +1165,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Kai Feng (DKNXKT7VXR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kai Feng (DKNXKT7VXR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidDrawing/KidDrawing-Prefix.pch";
 				INFOPLIST_FILE = "KidDrawing/KidDrawing-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = Drawing4Kids;
-				PROVISIONING_PROFILE = "C4DBB148-02DC-4765-B14A-E883387FD35A";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1177,14 +1183,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Kai Feng (66XE799M3H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kai Feng (66XE799M3H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidDrawing/KidDrawing-Prefix.pch";
 				INFOPLIST_FILE = "KidDrawing/KidDrawing-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = Drawing4Kids;
-				PROVISIONING_PROFILE = "C4DBB148-02DC-4765-B14A-E883387FD35A";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
