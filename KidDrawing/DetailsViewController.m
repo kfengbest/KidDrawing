@@ -8,11 +8,16 @@
 
 #import "DetailsViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "SketchPadView.h"
 
 @interface DetailsViewController ()
 {
     UIPageControl* pageControl;
     UIScrollView* sv;
+    
+    // used for drawing
+    SketchPadToolType sketchType;
+    
     int imageW;
     int imageH;
     int originalViewW;
@@ -61,8 +66,12 @@
         scrollviewOffset = 20;
     }
     
-    sv = [[UIScrollView alloc] initWithFrame:CGRectMake(0, scrollviewOffset, self.view.frame.size.width, self.view.frame.size.height)];
-    sv.contentSize = CGSizeMake(self.view.frame.size.width * num,self.view.frame.size.height);
+
+    int svWidth = self.view.frame.size.width, svHeight = MIN(self.view.frame.size.height,imageH);
+    imageH = svHeight;
+    imageW = MIN(svWidth, imageW);
+    sv = [[UIScrollView alloc] initWithFrame:CGRectMake(0, scrollviewOffset, svWidth, svHeight)];
+    sv.contentSize = CGSizeMake(self.view.frame.size.width * num, svHeight);
     [self.view addSubview:sv];
     
     sv.pagingEnabled = YES;
@@ -71,7 +80,7 @@
     [sv setDelegate:self];
     
     for (int i = 0; i < num; i++) {
-        UIView* subView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width * i, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        UIView* subView = [[UIView alloc] initWithFrame:CGRectMake(svWidth* i, 0, svWidth, svHeight)];
         
         NSString* name = [NSString stringWithFormat:@"%@%d.png", self.name,i+1];
         UIImage *img = [UIImage imageNamed:name];
@@ -94,8 +103,12 @@
     
     pageControl.numberOfPages = num;
     
+    /// initialize the drawing view
+    sketchPad.toolType = SketchPadToolTypePaint;
+    sketchPad.backgroundColor = [UIColor whiteColor];
+    sketchPad.drawWidth = 8.0f;
     
-}
+   }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
@@ -161,15 +174,17 @@
 
         
     }else if (toInterfaceOrientation == UIInterfaceOrientationPortrait ||
-              toInterfaceOrientation == UIDeviceOrientationPortraitUpsideDown){
+              toInterfaceOrientation == UIDeviceOrientationPortraitUpsideDown)
+    {
         self.view.frame = CGRectMake(0, 0, originalViewW, originalViewH);
-        sv.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-        sv.contentSize = CGSizeMake(self.view.frame.size.width * 4,self.view.frame.size.height);
+        int svWidth = self.view.frame.size.width, svHeight = imageH;
+        sv.frame = CGRectMake(0, 0, svWidth, svHeight);
+        sv.contentSize = CGSizeMake(svWidth * 4, svHeight);
         
         NSArray* subViews = sv.subviews;
         for (int i = 0; i < subViews.count; i++) {
             UIView* subView = (UIView*)subViews[i];
-            subView.frame = CGRectMake(self.view.frame.size.width * i, 0, self.view.frame.size.width, self.view.frame.size.height);
+            subView.frame = CGRectMake(svWidth * i, 0, svWidth, svHeight);
             
             NSArray* subImages = subView.subviews;
             UIView* imageView = (UIView*)subImages[0];
@@ -180,9 +195,9 @@
         }
         
         pageControl.frame = CGRectMake(0, self.view.frame.size.height - 20, self.view.frame.size.width, 20);
+        
 
     }
-    
 }
 
 

@@ -6,7 +6,7 @@ typedef enum {
 	SketchPadToolTypeAirBrush
 } SketchPadToolType;
 
-@interface DAScratchPadView : UIControl
+@interface SketchPadView : UIControl
 
 @property (assign) SketchPadToolType toolType;
 @property (strong,nonatomic) UIColor* drawColor;

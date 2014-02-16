@@ -211,6 +211,7 @@
 		12DD337218A5C7B100EF4E8A /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DD336E18A5C7B100EF4E8A /* Default-Portrait@2x~ipad.png */; };
 		12DD337318A5C7B100EF4E8A /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DD336F18A5C7B100EF4E8A /* Default-Portrait~ipad.png */; };
 		12FC56B31895240100ADD6EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12FC56B11895240100ADD6EF /* Default-568h@2x.png */; };
+		601E4EAC18B108A90058496F /* SketchPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E4EAB18B108A90058496F /* SketchPadViewController.m */; };
 		605BF5DA18ABBE3400A9CF78 /* SketchPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BF5D918ABBE3400A9CF78 /* SketchPadView.m */; };
 /* End PBXBuildFile section */
 
@@ -436,6 +437,8 @@
 		12DD336E18A5C7B100EF4E8A /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		12DD336F18A5C7B100EF4E8A /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		12FC56B11895240100ADD6EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		601E4EAA18B108A90058496F /* SketchPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchPadViewController.h; sourceTree = "<group>"; };
+		601E4EAB18B108A90058496F /* SketchPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchPadViewController.m; sourceTree = "<group>"; };
 		605BF5D818ABBE3400A9CF78 /* SketchPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchPadView.h; sourceTree = "<group>"; };
 		605BF5D918ABBE3400A9CF78 /* SketchPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchPadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -504,6 +507,8 @@
 				123E39CE188E9B44008B7257 /* ImageViewCell.h */,
 				123E39CF188E9B44008B7257 /* ImageViewCell.m */,
 				123E3982188E9882008B7257 /* Main_iPhone.storyboard */,
+				601E4EAA18B108A90058496F /* SketchPadViewController.h */,
+				601E4EAB18B108A90058496F /* SketchPadViewController.m */,
 				123E397F188E9882008B7257 /* AppDelegate.h */,
 				123E3980188E9882008B7257 /* AppDelegate.m */,
 				123E3985188E9882008B7257 /* Main_iPad.storyboard */,
@@ -1022,6 +1027,7 @@
 				605BF5DA18ABBE3400A9CF78 /* SketchPadView.m in Sources */,
 				123E39D0188E9B44008B7257 /* ImageViewCell.m in Sources */,
 				123E39D3188EAD91008B7257 /* DetailsViewController.m in Sources */,
+				601E4EAC18B108A90058496F /* SketchPadViewController.m in Sources */,
 				123E398A188E9882008B7257 /* ViewController.m in Sources */,
 				123E3981188E9882008B7257 /* AppDelegate.m in Sources */,
 				123E397D188E9882008B7257 /* main.m in Sources */,

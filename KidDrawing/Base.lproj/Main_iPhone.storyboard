@@ -20,6 +20,24 @@
             </objects>
             <point key="canvasLocation" x="-1258" y="50"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="m3P-I0-SaL">
+            <objects>
+                <viewController id="wGc-yd-uBQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yMz-oq-2TB"/>
+                        <viewControllerLayoutGuide type="bottom" id="i7C-26-OOg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="de9-HL-vuj" customClass="SketchPadView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWY-rA-4Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1258" y="638"/>
+        </scene>
         <!--View Controller - Drawing Gallery-->
         <scene sceneID="kKi-Ou-ZQ2">
             <objects>
@@ -82,12 +100,15 @@
                         <viewControllerLayoutGuide type="top" id="lzP-GQ-0NB"/>
                         <viewControllerLayoutGuide type="bottom" id="gJn-J4-9v0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BiN-1N-NR5" userLabel="SketchPadView">
+                    <view key="view" contentMode="scaleToFill" id="BiN-1N-NR5" userLabel="SketchPadView" customClass="SketchPadView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Steps" id="hog-YX-8Ok"/>
+                    <connections>
+                        <outlet property="sketchPad" destination="BiN-1N-NR5" id="16Z-iE-74m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGN-Dx-5Ln" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

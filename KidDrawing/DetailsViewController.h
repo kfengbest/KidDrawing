@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SketchPadView.h"
 
 @interface DetailsViewController : UIViewController<UIScrollViewDelegate>
 {
     
+    IBOutlet SketchPadView *sketchPad;
 }
 
 @property (strong, nonatomic) NSString *name;

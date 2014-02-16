@@ -1,7 +1,7 @@
 #import "SketchPadView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation DAScratchPadView
+@implementation SketchPadView
 {
 	CGFloat _drawOpacity;
 	CGFloat _airBrushFlow;
@@ -30,6 +30,8 @@
 	airBrushImage = nil;
 	[self.layer addSublayer:drawLayer];
 	[self clearToColor:self.backgroundColor];
+    drawLayer.contents = nil;
+	drawImage = nil;
 }
 
 - (id) initWithFrame:(CGRect)frame {
